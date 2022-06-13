@@ -1,12 +1,18 @@
 body {
-  background-color: cyan;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  background-image: url("./img/homepage-pic.jpg");
+  background-size: 100%;
+  background-position: 0 -200px;
+  max-height: fit-content;
+}
+
+#content {
 }
 
 nav {
-  background-color: orange;
+  background-color: rgba(0, 0, 0, 0.5);
   /* padding: 20px; */
   display: flex;
   margin: 0 auto;
@@ -21,11 +27,11 @@ nav a {
   color: white;
   font-size: 1.4rem;
   text-align: center;
-  border-bottom: 3px solid orange;
+  border-bottom: 3px solid transparent;
 }
 
 nav a:hover {
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid orange;
   background-color: white;
   color: black;
 }
