@@ -1,22 +1,37 @@
 const homePage = () => console.log("Homepage Loaded!");
 
-// const navArr = ["HOME", "MENU", "ABOUT US", "BOOKING"]
-// const nav = () => {
-//     const navbar = document.createElement("div");
-//     navbar.classList.add("navbar");
+const leftLinks = ["HOME", "MENU"]
+const rightLinks = ["ABOUT US", "BOOKING"]
+const nav = () => {
+    const navbar = document.createElement("div");
+    navbar.classList.add("navbar");
+    const leftNav = document.createElement("div");
+    leftNav.classList.add("left-links")
+    const rightNav = document.createElement("div");
+    rightNav.classList.add("right-links");
 
-//     const navList = document.createElement("ul");
-//     navArr.forEach((menu) => {
-//         const navMenu = document.createElement("li");
-//         navMenu.classList.add("nav-menu");
-//         navMenu.textContent = menu;
-//         navList.appendChild(navMenu);
-//     })
+    leftLinks.forEach((link) => {
+        const a = document.createElement("a");
+        a.setAttribute("href", "#");
+        a.textContent = link;
+        leftNav.childNodes(a);
+    })
 
-//     navbar.appendChild(navList);
+    rightLinks.forEach((link) => {
+        const a = document.createElement("a");
+        a.setAttribute("href", "#");
+        a.textContent = link;
+        rightNav.childNodes(a);
+        if (link === "BOOKING") {
+            a.setAttribute("id", "booking");
+        }
+    })
 
-//     return navbar;
-// }
+    navbar.appendChild(leftNav);
+    navbar.appendChild(rightNav);
+
+    return navbar;
+}
 
 
-export { homePage }
+export { homePage, nav }
