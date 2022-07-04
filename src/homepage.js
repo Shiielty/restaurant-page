@@ -3,7 +3,7 @@ const homePage = () => console.log("Homepage Loaded!");
 const leftLinks = ["HOME", "MENU"]
 const rightLinks = ["ABOUT US", "BOOKING"]
 const nav = () => {
-    const navbar = document.createElement("div");
+    const navbar = document.createElement("nav");
     navbar.classList.add("navbar");
     const leftNav = document.createElement("div");
     leftNav.classList.add("left-links")
@@ -14,14 +14,14 @@ const nav = () => {
         const a = document.createElement("a");
         a.setAttribute("href", "#");
         a.textContent = link;
-        leftNav.childNodes(a);
+        leftNav.appendChild(a);
     })
 
     rightLinks.forEach((link) => {
         const a = document.createElement("a");
         a.setAttribute("href", "#");
         a.textContent = link;
-        rightNav.childNodes(a);
+        rightNav.appendChild(a);
         if (link === "BOOKING") {
             a.setAttribute("id", "booking");
         }
