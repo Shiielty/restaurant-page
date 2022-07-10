@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Island+Moments&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inknut+Antiqua&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400&display=swap");
 
 body {
   box-sizing: border-box;
@@ -11,6 +11,15 @@ body {
   background-attachment: fixed;
   background-position: center;
   max-height: fit-content;
+}
+
+.bg-filter {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: -1;
 }
 
 nav {
@@ -48,3 +57,32 @@ nav a:hover {
   border-bottom: 3px solid white;
   background-color: orange;
 }
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  margin-top: 100px;
+  font-family: "Island Moments", cursive;
+  font-size: 9rem;
+  color: white;
+}
+
+.title-desc {
+  margin-top: -20px;
+  font-family: "Inknut Antiqua", serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: white;
+  width: 350px;
+  text-align: center;
+  text-decoration: underline;
+  letter-spacing: 0.2rem;
+  line-height: 2;
+}
+
+/* font-family: 'Inknut Antiqua', serif; 
+    font-family: 'Island Moments', cursive;*/

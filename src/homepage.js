@@ -34,10 +34,12 @@ const nav = () => {
 }
 
 const mainContent = () => {
+    const bgFilter = document.createElement("div");
     const mainContent = document.createElement("div");
     const title = document.createElement("div");
     const titleDesc = document.createElement("div");
 
+    bgFilter.classList.add("bg-filter");
     mainContent.classList.add("main-content");
     title.classList.add("title");
     titleDesc.classList.add("title-desc");
@@ -45,6 +47,7 @@ const mainContent = () => {
     title.textContent = "Dice";
     titleDesc.textContent = "A Perfect Place for Your Dumpling Addictions";
 
+    mainContent.appendChild(bgFilter);
     mainContent.appendChild(title);
     mainContent.appendChild(titleDesc);
 
