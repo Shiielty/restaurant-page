@@ -16,6 +16,8 @@ const nav = () => {
         a.textContent = link;
         if (link === "MENU") {
             a.classList.add("menu-btn");
+        } else if (link === "HOME") {
+            a.classList.add("home-btn");
         }
         leftNav.appendChild(a);
     })
