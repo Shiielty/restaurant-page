@@ -14,9 +14,18 @@ const content = document.querySelector("#content");
 content.appendChild(navComponent);
 content.appendChild(mainContentComponent);
 
+const homeBtn = document.querySelectorAll(".home-btn");
 const menuBtn = document.querySelectorAll(".menu-btn");
-menuBtn.forEach((menu) => {
-    menu.addEventListener("click", () => {
+
+homeBtn.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        content.removeChild(mainContentComponent);
+        content.appendChild(mainContentComponent);
+    })
+})
+
+menuBtn.forEach((btn) => {
+    btn.addEventListener("click", () => {
         content.removeChild(mainContentComponent);
     });
 });
