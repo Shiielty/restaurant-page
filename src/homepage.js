@@ -38,18 +38,27 @@ const mainContent = () => {
     const mainContent = document.createElement("div");
     const title = document.createElement("div");
     const titleDesc = document.createElement("div");
+    const subDesc = document.createElement("div");
+    const menuBtn = document.createElement("span");
 
     bgFilter.classList.add("bg-filter");
     mainContent.classList.add("main-content");
     title.classList.add("title");
     titleDesc.classList.add("title-desc");
+    subDesc.classList.add("title-desc", "sub-desc");
+    menuBtn.classList.add("menu-btn");
 
     title.textContent = "Dice";
     titleDesc.textContent = "A Perfect Place for Your Dumpling Addictions";
+    subDesc.textContent = "Check out our ";
+    menuBtn.textContent = "menu";
+
+    subDesc.appendChild(menuBtn);
 
     mainContent.appendChild(bgFilter);
     mainContent.appendChild(title);
     mainContent.appendChild(titleDesc);
+    mainContent.appendChild(subDesc);
 
     return mainContent;
 }

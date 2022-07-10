@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Island+Moments&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400&display=swap");
 
+:root {
+  --yellow: #ffe380;
+  --gray: #504d4d;
+}
+
 body {
   box-sizing: border-box;
   margin: 0;
@@ -79,9 +84,23 @@ nav a:hover {
   color: white;
   width: 350px;
   text-align: center;
-  text-decoration: underline;
   letter-spacing: 0.2rem;
   line-height: 2;
+}
+
+.sub-desc {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+
+.menu-btn {
+  background-color: var(--yellow);
+  color: var(--gray);
+  border-radius: 0.5rem;
+  padding: 0 10px;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 /* font-family: 'Inknut Antiqua', serif; 
