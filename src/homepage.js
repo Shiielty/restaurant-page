@@ -33,5 +33,23 @@ const nav = () => {
     return navbar;
 }
 
+const mainContent = () => {
+    const mainContent = document.createElement("div");
+    const title = document.createElement("div");
+    const titleDesc = document.createElement("div");
 
-export { homePage, nav }
+    mainContent.classList.add("main-content");
+    title.classList.add("title");
+    titleDesc.classList.add("title-desc");
+
+    title.textContent = "Dice";
+    titleDesc.textContent = "A Perfect Place for Your Dumpling Addictions";
+
+    mainContent.appendChild(title);
+    mainContent.appendChild(titleDesc);
+
+    return mainContent;
+}
+
+
+export { homePage, nav, mainContent }
