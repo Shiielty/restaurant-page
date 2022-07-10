@@ -19,8 +19,13 @@ const menuBtn = document.querySelectorAll(".menu-btn");
 
 homeBtn.forEach((btn) => {
     btn.addEventListener("click", () => {
-        content.removeChild(mainContentComponent);
-        content.appendChild(mainContentComponent);
+        const mainContent = document.querySelector(".main-content");
+        if (mainContent == null) {
+            content.appendChild(mainContentComponent);
+        }
+        else {
+            console.log("main content exist");
+        }
     })
 })
 
