@@ -7,6 +7,16 @@ console.log("Loading css...")
 console.log(homePage());
 console.log(menuPage());
 
+const navComponent = nav();
+const mainContentComponent = mainContent();
+
 const content = document.querySelector("#content");
-content.appendChild(nav());
-content.appendChild(mainContent());
+content.appendChild(navComponent);
+content.appendChild(mainContentComponent);
+
+const menuBtn = document.querySelectorAll(".menu-btn");
+menuBtn.forEach((menu) => {
+    menu.addEventListener("click", () => {
+        content.removeChild(mainContentComponent);
+    });
+});
