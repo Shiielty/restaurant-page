@@ -14,6 +14,9 @@ const nav = () => {
         const a = document.createElement("a");
         a.setAttribute("href", "#");
         a.textContent = link;
+        if (link === "MENU") {
+            a.classList.add("menu-btn");
+        }
         leftNav.appendChild(a);
     })
 
@@ -27,6 +30,8 @@ const nav = () => {
         }
     })
 
+    
+
     navbar.appendChild(leftNav);
     navbar.appendChild(rightNav);
 
@@ -34,6 +39,7 @@ const nav = () => {
 }
 
 const mainContent = () => {
+    const bg = document.createElement("div");
     const bgFilter = document.createElement("div");
     const mainContent = document.createElement("div");
     const title = document.createElement("div");
@@ -41,12 +47,13 @@ const mainContent = () => {
     const subDesc = document.createElement("div");
     const menuBtn = document.createElement("span");
 
+    bg.classList.add("bg");
     bgFilter.classList.add("bg-filter");
     mainContent.classList.add("main-content");
     title.classList.add("title");
     titleDesc.classList.add("title-desc");
     subDesc.classList.add("title-desc", "sub-desc");
-    menuBtn.classList.add("menu-btn");
+    menuBtn.classList.add("menu-link", "menu-btn");
 
     title.textContent = "Dice";
     titleDesc.textContent = "A Perfect Place for Your Dumpling Addictions";
@@ -55,6 +62,7 @@ const mainContent = () => {
 
     subDesc.appendChild(menuBtn);
 
+    mainContent.appendChild(bg);
     mainContent.appendChild(bgFilter);
     mainContent.appendChild(title);
     mainContent.appendChild(titleDesc);

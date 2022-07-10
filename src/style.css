@@ -10,12 +10,20 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+.bg {
   background-image: url("./img/homepage-pic.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
   max-height: fit-content;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -2;
 }
 
 .bg-filter {
@@ -95,7 +103,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-.menu-btn {
+.menu-link {
   background-color: var(--yellow);
   color: var(--gray);
   border-radius: 0.5rem;
