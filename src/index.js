@@ -1,9 +1,7 @@
-import { homePage, nav, mainContent } from './homepage.js'
-import { menuPage } from './menu.js'
-import './style.css';
+import { homePage, nav, mainContent } from "./homepage.js";
+import { menuPage } from "./menu.js";
+import "./style.css";
 
-console.log("Hello, world!");
-console.log("Loading css...")
 console.log(homePage());
 console.log(menuPage());
 
@@ -18,19 +16,23 @@ const homeBtn = document.querySelectorAll(".home-btn");
 const menuBtn = document.querySelectorAll(".menu-btn");
 
 homeBtn.forEach((btn) => {
-    btn.addEventListener("click", () => {
-        const mainContent = document.querySelector(".main-content");
-        if (mainContent == null) {
-            content.appendChild(mainContentComponent);
-        }
-        else {
-            console.log("main content exist");
-        }
-    })
-})
+  btn.addEventListener("click", () => {
+    const mainContent = document.querySelector(".main-content");
+    if (mainContent == null) {
+      content.appendChild(mainContentComponent);
+    } else {
+      console.log("main content exist");
+    }
+  });
+});
 
 menuBtn.forEach((btn) => {
-    btn.addEventListener("click", () => {
-        content.removeChild(mainContentComponent);
-    });
+  btn.addEventListener("click", () => {
+    const mainContent = document.querySelector(".main-content");
+    if (mainContent != null) {
+      content.removeChild(mainContentComponent);
+    } else {
+      console.log("main content component doesn't exist");
+    }
+  });
 });
