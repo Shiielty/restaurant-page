@@ -18,23 +18,14 @@ const menuBtn = document.querySelectorAll(".menu-btn");
 
 homeBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
-    const mainContent = document.querySelector(".main-content");
-    if (mainContent == null) {
-      content.appendChild(mainContentComponent);
-    } else {
-      console.log("main content exist");
-    }
+    content.removeChild(content.childNodes[1]);
+    content.appendChild(mainContentComponent);
   });
 });
 
 menuBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
-    const mainContent = document.querySelector(".main-content");
-    if (mainContent != null) {
-      content.removeChild(mainContentComponent);
-      content.appendChild(menuComponent);
-    } else {
-      console.log("main content component doesn't exist");
-    }
+    content.removeChild(content.childNodes[1]);
+    content.appendChild(menuComponent);
   });
 });
