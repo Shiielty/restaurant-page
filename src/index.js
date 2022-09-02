@@ -20,6 +20,9 @@ homeBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
     content.removeChild(content.childNodes[1]);
     content.appendChild(mainContentComponent);
+
+    const nav = document.querySelector(".navbar");
+    nav.style.backgroundColor = "rgb(0, 0, 0, 0.5)";
   });
 });
 
@@ -27,5 +30,8 @@ menuBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
     content.removeChild(content.childNodes[1]);
     content.appendChild(menuComponent);
+
+    const nav = document.querySelector(".navbar");
+    nav.style.backgroundColor = "rgb(0, 0, 0, 1)";
   });
 });
