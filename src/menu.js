@@ -16,6 +16,12 @@ const noodles = {
     "Vegetable Lo Mein": 5.00
 }
 
+const test = () => {
+    for (const menu in dumplings) {
+        console.log(`${menu}'s price is ${dumplings[menu]}`);
+    }
+}
+
 // Menu page structure: header menu (h1) + (menu container > menu heading (h2) + menu names (p)*n)*2
 // create dom elements: 
 //  - header menu (h1) * 1
@@ -24,4 +30,4 @@ const noodles = {
 //  - menu names (p) * n each container --> loop to input all menu names and prices
 // append all of that to menuContent and export it as menu *page*
 
-export {menuPage}
+export {menuPage, test}
