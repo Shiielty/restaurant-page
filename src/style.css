@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Island+Moments&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@font-face {
+  font-family: "Great Vibes";
+  src: url("./GreatVibes-Regular.otf");
+}
 
 :root {
   --yellow: #ffe380;
@@ -10,6 +15,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  background-color: var(--yellow);
 }
 
 .bg {
@@ -38,7 +44,6 @@ body {
 nav {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 0 24px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
@@ -112,5 +117,58 @@ nav a:hover {
   text-decoration: underline;
 }
 
+.menu-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 10%;
+  height: 120vh;
+}
+
+.menu-head {
+  text-align: center;
+  margin-top: 0;
+  padding-top: 50px;
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 3rem;
+}
+
+.menu-type {
+  font-size: 3rem;
+  font-family: "Great Vibes", serif;
+  margin: 30px 0 25px 0;
+  border-bottom: 2px solid var(--gray);
+}
+
+.menu-content > div:last-of-type > .menu-type {
+  margin-top: 64px;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 0 10px;
+  align-items: baseline;
+  margin-bottom: 15px;
+}
+
+.menu-name,
+.menu-price {
+  flex: 0 1 auto;
+  white-space: nowrap;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+}
+
+.divider {
+  flex: 1 0 auto;
+  border-bottom: 2px solid var(--gray);
+  margin-bottom: 5px;
+}
+
+
+
 /* font-family: 'Inknut Antiqua', serif; 
-    font-family: 'Island Moments', cursive;*/
+    font-family: 'Island Moments', cursive;
+        font-family: 'Montserrat', sans-serif;*/
