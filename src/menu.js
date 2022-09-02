@@ -29,32 +29,52 @@ const menu = () => {
     // Create dom
     const container = document.createElement("div");
     const menuHead = document.createElement("h1");
-
+    
     menuHead.textContent = "Menu";
 
-    const menusContainer = document.createElement("div");
-    for (const name in dumplings) {
-        const menuContainer = document.createElement("div");
-        const menuName = document.createElement("p");
-        const menuPrice = document.createElement("p");
+    container.appendChild(menuHead);
 
-        menuName.textContent = `${name}`;
-        menuPrice.textContent = `${dumplings[name]}`;
+    for (let i = 0; i < 2; i++) {
+        const menusContainer = document.createElement("div");
+        const menuType = document.createElement("h3");
+        
+        menusContainer.appendChild(menuType);
 
-        menuContainer.appendChild(menuName);
-        menuContainer.appendChild(menuPrice);
-        menusContainer.appendChild(menuContainer);
+        if (i === 0){
+            for (const name in dumplings) {
+                const menuContainer = document.createElement("div");
+                const menuName = document.createElement("p");
+                const menuPrice = document.createElement("p");
+                
+                menuName.textContent = `${name}`;
+                menuPrice.textContent = `${dumplings[name]}`;
+                menuType.textContent = "Dumplings"
+                
+                menuContainer.appendChild(menuName);
+                menuContainer.appendChild(menuPrice);
+                menusContainer.appendChild(menuContainer);
+                container.appendChild(menusContainer);
+            }
+        }
+        else {
+            for (const name in noodles) {
+                const menuContainer = document.createElement("div");
+                const menuName = document.createElement("p");
+                const menuPrice = document.createElement("p");
+                
+                menuType.textContent = "Noodles"
+                menuName.textContent = `${name}`;
+                menuPrice.textContent = `${noodles[name]}`;
+                
+                menuContainer.appendChild(menuName);
+                menuContainer.appendChild(menuPrice);
+                menusContainer.appendChild(menuContainer);
+                container.appendChild(menusContainer);
+            }
+        }
     }
 
-    container.appendChild(menuHead);
-    container.appendChild(menusContainer);
-
     return container;
-
-    // for (let i = 0; i < 2; i++){
-    //     if (i === 0){
-    //         }
-    //     }
 }
 
 
