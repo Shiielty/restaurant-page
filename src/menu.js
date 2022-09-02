@@ -37,7 +37,7 @@ const menu = () => {
     for (let i = 0; i < 2; i++) {
         const menusContainer = document.createElement("div");
         const menuType = document.createElement("h3");
-        
+
         menusContainer.appendChild(menuType);
 
         if (i === 0){
@@ -47,7 +47,7 @@ const menu = () => {
                 const menuPrice = document.createElement("p");
                 
                 menuName.textContent = `${name}`;
-                menuPrice.textContent = `${dumplings[name]}`;
+                menuPrice.textContent = `$${dumplings[name]}`;
                 menuType.textContent = "Dumplings"
                 
                 menuContainer.appendChild(menuName);
@@ -64,7 +64,7 @@ const menu = () => {
                 
                 menuType.textContent = "Noodles"
                 menuName.textContent = `${name}`;
-                menuPrice.textContent = `${noodles[name]}`;
+                menuPrice.textContent = `$${noodles[name]}`;
                 
                 menuContainer.appendChild(menuName);
                 menuContainer.appendChild(menuPrice);
