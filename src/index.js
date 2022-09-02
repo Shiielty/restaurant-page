@@ -1,5 +1,5 @@
 import { homePage, nav, mainContent } from "./homepage.js";
-import { menuPage } from "./menu.js";
+import { menuPage, menu } from "./menu.js";
 import "./style.css";
 
 console.log(homePage());
@@ -7,6 +7,7 @@ console.log(menuPage());
 
 const navComponent = nav();
 const mainContentComponent = mainContent();
+const menuComponent = menu();
 
 const content = document.querySelector("#content");
 content.appendChild(navComponent);
@@ -31,6 +32,7 @@ menuBtn.forEach((btn) => {
     const mainContent = document.querySelector(".main-content");
     if (mainContent != null) {
       content.removeChild(mainContentComponent);
+      content.appendChild(menuComponent);
     } else {
       console.log("main content component doesn't exist");
     }
