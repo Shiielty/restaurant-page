@@ -16,12 +16,6 @@ const noodles = {
     "Vegetable Lo Mein": 5.00,
 }
 
-const test = () => {
-    for (const menu in dumplings) {
-        console.log(`${menu}'s price is ${dumplings[menu]}`);
-    }
-}
-
 const createMenu = (menuType, type, obj, name) => {
     const menuContainer = document.createElement("div");
     const menuName = document.createElement("p");
@@ -44,7 +38,6 @@ const createMenu = (menuType, type, obj, name) => {
     return menuContainer;
 }
 
-// Menu page structure: header menu (h1) + (menu container > menu heading (h2) + menu names (p)*n)*2
 const menu = () => {
     
     const container = document.createElement("div");
@@ -84,13 +77,4 @@ const menu = () => {
     return container;
 }
 
-
-
-// create dom elements: 
-//  - header menu (h1) * 1
-//  - menu container (div) * 2
-//  - menu heading (h2) * 1 each container
-//  - menu names (p) * n each container --> loop to input all menu names and prices
-// append all of that to menuContent and export it as menu *page*
-
-export {menuPage, test, menu}
+export {menuPage, menu}
