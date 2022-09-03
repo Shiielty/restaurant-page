@@ -27,7 +27,9 @@ const nav = () => {
     a.setAttribute("href", "#");
     a.textContent = link;
     rightNav.appendChild(a);
-    if (link === "BOOKING") {
+    if (link === "ABOUT US") {
+      a.classList.add("about-btn");
+    } else if (link === "BOOKING") {
       a.setAttribute("id", "booking");
     }
   });
