@@ -16,6 +16,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--yellow);
+  font-family: 'Montserrat', sans-serif;
 }
 
 .bg {
@@ -157,7 +158,6 @@ nav a:hover {
   flex: 0 1 auto;
   white-space: nowrap;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
 }
 
@@ -165,6 +165,30 @@ nav a:hover {
   flex: 1 0 auto;
   border-bottom: 2px solid var(--gray);
   margin-bottom: 5px;
+}
+
+.about-header {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.about-title {
+  font-family: 'Inknut Antiqua';
+  font-size: 3rem;
+}
+
+.about-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.about-img {
+  width: 200px;
+  height: auto;
 }
 
 
