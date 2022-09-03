@@ -1,9 +1,11 @@
 import { homePage, nav, mainContent } from "./homepage.js";
 import { menuPage, menu } from "./menu.js";
+import { aboutUsPage } from "./aboutUs.js";
 import "./style.css";
 
 console.log(homePage());
 console.log(menuPage());
+console.log(console.log(aboutUsPage()))
 
 const navComponent = nav();
 const mainContentComponent = mainContent();
