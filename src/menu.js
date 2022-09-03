@@ -1,7 +1,5 @@
 const menuPage = () => console.log("Loading menu... Success!!");
 
-// declare menu names and price in object, dumpling and noodle soup
-
 const dumplings = {
     "Chiken Dumpling": 6.25,
     "Beef Dumpling": 6.25,
@@ -44,7 +42,6 @@ const createMenu = (menuType, type, obj, name) => {
     return menuContainer;
 }
 
-// Menu page structure: header menu (h1) + (menu container > menu heading (h2) + menu names (p)*n)*2
 const menu = () => {
     
     const container = document.createElement("div");
@@ -83,14 +80,5 @@ const menu = () => {
 
     return container;
 }
-
-
-
-// create dom elements: 
-//  - header menu (h1) * 1
-//  - menu container (div) * 2
-//  - menu heading (h2) * 1 each container
-//  - menu names (p) * n each container --> loop to input all menu names and prices
-// append all of that to menuContent and export it as menu *page*
 
 export {menuPage, test, menu}

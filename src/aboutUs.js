@@ -1,14 +1,7 @@
 const aboutUsPage = () => console.log("About Us module loaded successfully!")
 
-// Module structure:
-//  - Title (h1): About Us <- with bg-image
-//  - about us desc (p): lorem ipsum
-//  - restaurant location (img): map or picture of random restaurant
-//  - contact (ul): address, phone, email, instagram
-
 const about = () => {
     
-    //create DOMs
     const container = document.createElement("div");
     const headerContainer = document.createElement("div");
     const title = document.createElement("h1");
@@ -23,7 +16,6 @@ const about = () => {
     const email = document.createElement("li");
     const ig = document.createElement("li");
 
-    //add class
     headerContainer.classList.add("about-header");
     title.classList.add("about-title");
     contentContainer.classList.add("menu-content");
