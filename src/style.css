@@ -223,9 +223,11 @@ nav a:hover {
 }
 
 .about-img {
-  width: 200px;
-  height: 150px;
+  width: 350px;
+  height: 210px;
   flex: 0 0 auto;
+  background-image: url("./img/random-map.png");
+  background-size: contain;
 }
 
 .about-info > div > ul {
