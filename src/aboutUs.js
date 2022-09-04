@@ -4,6 +4,7 @@ const about = () => {
     
     const container = document.createElement("div");
     const headerContainer = document.createElement("div");
+    const bgFilter = document.createElement("div");
     const title = document.createElement("h1");
     const contentContainer = document.createElement("div");
     const desc = document.createElement("p");
@@ -17,8 +18,8 @@ const about = () => {
     const ig = document.createElement("li");
 
     headerContainer.classList.add("about-header");
+    bgFilter.classList.add("about-bg-filter");
     title.classList.add("about-title");
-    contentContainer.classList.add("menu-content");
     infoContainer.classList.add("about-info");
     img.classList.add("about-img");
 
@@ -29,7 +30,8 @@ const about = () => {
     email.textContent = "our.restaurant@example.com";
     ig.textContent = "@example";
 
-    headerContainer.appendChild(title);
+    bgFilter.appendChild(title);
+    headerContainer.appendChild(bgFilter);
     contactList.appendChild(address);
     contactList.appendChild(phone);
     contactList.appendChild(email);
