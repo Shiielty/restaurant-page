@@ -42,5 +42,8 @@ menuBtn.forEach((btn) => {
 
 aboutBtn.addEventListener("click", () => {
   content.removeChild(content.childNodes[1]);
-  content.appendChild(aboutComponent)
+  content.appendChild(aboutComponent);
+
+  const nav = document.querySelector(".navbar");
+  nav.style.backgroundColor = "rgb(0, 0, 0, 1)";
 })
