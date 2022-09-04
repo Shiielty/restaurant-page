@@ -49,6 +49,14 @@ nav {
   justify-content: space-between;
 }
 
+.left-links,
+.right-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  white-space: nowrap;
+}
+
 nav a {
   font-family: "Inknut Antiqua", serif;
   display: inline-block;
@@ -170,6 +178,20 @@ nav a:hover {
 .about-header {
   height: 200px;
   width: 100%;
+
+  background-image: url("./img/homepage-pic.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.about-bg-filter {
+  position: relative;
+  top: 0;
+  height: inherit;
+  width: inherit;
+  background-color: rgba(0, 0, 0, 0.3);
+
   display: flex;
   justify-content: center;
   align-content: center;
@@ -178,17 +200,48 @@ nav a:hover {
 .about-title {
   font-family: 'Inknut Antiqua';
   font-size: 3rem;
+  color: #ffffff;
+}
+
+.about-header + div {
+  max-width: 800px;
+  margin: 64px auto 0 auto;
+  padding: 0 10%;
+  height: auto;
+}
+
+.about-header + div > p {
+  line-height: 2rem;
 }
 
 .about-info {
+  margin: 36px 0 64px 0;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
+  row-gap: 50px;
+  flex-wrap: wrap;
 }
 
 .about-img {
   width: 200px;
-  height: auto;
+  height: 150px;
+  flex: 0 0 auto;
+}
+
+.about-info > div > ul {
+  height: 100%;
+  margin: 0 10px;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  list-style: none;
+}
+
+.about-info > div > ul > li {
+  margin: 4px 0;
 }
 
 
