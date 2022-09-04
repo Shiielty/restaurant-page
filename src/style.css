@@ -128,9 +128,8 @@ nav a:hover {
 
 .menu-content {
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 0 auto 100px auto;
   padding: 0 10%;
-  height: 120vh;
 }
 
 .menu-head {
@@ -205,7 +204,7 @@ nav a:hover {
 
 .about-header + div {
   max-width: 800px;
-  margin: 64px auto 0 auto;
+  margin: 64px auto 100px auto;
   padding: 0 10%;
   height: auto;
 }
@@ -215,11 +214,11 @@ nav a:hover {
 }
 
 .about-info {
-  margin: 36px 0 64px 0;
+  margin-top: 36px;
   display: flex;
   justify-content: space-evenly;
   row-gap: 50px;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
 }
 
 .about-img {
@@ -244,7 +243,35 @@ nav a:hover {
 
 .about-info > div > ul > li {
   margin: 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
+
+
+.about-info > div > ul > li:first-child {
+  font-weight: 900;
+  font-size: 1.2rem;
+  border-bottom: 1px solid var(--gray);
+  margin-bottom: 20px;
+}
+
+.about-info > div > ul > li:nth-child(2)::before {
+  content: url("./img/map-pin.svg");
+}
+
+.about-info > div > ul > li:nth-child(3)::before {
+  content: url("./img/phone.svg");
+}
+
+.about-info > div > ul > li:nth-child(4)::before {
+  content: url("./img/mail.svg");
+}
+
+.about-info > div > ul > li:last-child::before {
+  content: url("./img/instagram.svg");
+}
+
 
 
 
