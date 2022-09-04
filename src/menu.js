@@ -14,12 +14,6 @@ const noodles = {
     "Vegetable Lo Mein": 5.00,
 }
 
-const test = () => {
-    for (const menu in dumplings) {
-        console.log(`${menu}'s price is ${dumplings[menu]}`);
-    }
-}
-
 const createMenu = (menuType, type, obj, name) => {
     const menuContainer = document.createElement("div");
     const menuName = document.createElement("p");
@@ -81,4 +75,4 @@ const menu = () => {
     return container;
 }
 
-export {menuPage, test, menu}
+export {menuPage, menu}
