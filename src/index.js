@@ -20,6 +20,7 @@ const clear = (parent) => {
 }
 
 const navColor = (oppacity) => {
+  const navbar = document.querySelector(".navbar");
   navbar.style.backgroundColor = `rgb(0, 0, 0, ${oppacity})`;
 }
 
@@ -30,7 +31,7 @@ const changeTab = (e) => {
     case targetClass.includes("home-btn"):
       clear(content);
       content.appendChild(components.homePage);
-      navColor(0.3);
+      navColor(0.5);
       break;
     case targetClass.includes("menu-btn"):
       clear(content);
@@ -55,11 +56,5 @@ const changeTab = (e) => {
 const content = document.querySelector("#content");
 content.appendChild(components.navbar);
 content.appendChild(components.homePage);
-
-const navbar = document.querySelector(".navbar");
-const homeBtn = document.querySelectorAll(".home-btn");
-const menuBtn = document.querySelectorAll(".menu-btn");
-const aboutBtn = document.querySelector(".about-btn")
-const bookingBtn = document.querySelector("#booking")
 
 content.addEventListener("click", changeTab);
